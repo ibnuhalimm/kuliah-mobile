@@ -8,29 +8,33 @@
 
 <ion-content>
     <div class="ion-padding">
-        <div id="menu-wrapper">
-            <div class="row-menu">
-                <div class="col col-50">
-                    <a href="#" class="btn-menu">
-                        <span class="icon lh60">
-                            <ion-icon ios="ios-finger-print" md="md-finger-print"></ion-icon>
-                        </span>
-                        <span class="text">
-                            Log In
-                        </span>
-                    </a>
+        <ion-row>
+            <ion-col>
+                <div id="menu-wrapper">
+                    <div class="row-menu">
+                        <div class="col col-50">
+                            <a href="#" class="btn-menu" routerLink="/login" routerDirection="forward">
+                                <span class="icon lh60">
+                                    <ion-icon ios="ios-finger-print" md="md-finger-print"></ion-icon>
+                                </span>
+                                <span class="text">
+                                    Log In
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col col-50">
+                            <a href="#" class="btn-menu" routerLink="/products" routerDirection="forward">
+                                <span class="icon lh60">
+                                    <ion-icon ios="ios-basket" md="md-basket"></ion-icon>
+                                </span>
+                                <span class="text">
+                                    Products
+                                </span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col col-50">
-                    <a href="#" class="btn-menu">
-                        <span class="icon lh60">
-                            <ion-icon ios="ios-basket" md="md-basket"></ion-icon>
-                        </span>
-                        <span class="text">
-                            Products
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
+            </ion-col>
+        </ion-row>
     </div>
 </ion-content>
