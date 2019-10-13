@@ -8,6 +8,7 @@ $color-primary: #3ea7ed;
 .row-menu::after {
     content: " ";
     display: table;
+    clear: both;
 }
 
 .col {

@@ -1,13 +1,20 @@
 <ion-header>
     <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button defaultHref="/"></ion-back-button>
+        <ion-buttons slot="start" menuToggle>
+            <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>Products List</ion-title>
+        <ion-title>Daftar Produk</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="toAddProduct()">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
     <ion-list>
         <ion-list-header>
             Kategori 001

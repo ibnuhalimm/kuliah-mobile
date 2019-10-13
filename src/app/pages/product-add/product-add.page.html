@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" menuToggle>
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Tambah Produk</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-item class="form-group">
+        <ion-label position="stacked">
+            Nama <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input type="text" name="nama"></ion-input>
+    </ion-item>
+
+    <ion-item class="form-group">
+        <ion-label position="stacked">
+            Deskripsi <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-textarea name="deskripsi"></ion-textarea>
+    </ion-item>
+
+    <ion-item class="form-group">
+        <ion-label position="stacked">
+            Kategori <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-select name="kategori" placeholder="Pilih Kategori">
+            <ion-select-option value="001">Kategori 001</ion-select-option>
+            <ion-select-option value="002">Kategori 002</ion-select-option>
+            <ion-select-option value="003">Kategori 003</ion-select-option>
+            <ion-select-option value="004">Kategori 004</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item class="form-group">
+        <ion-label position="stacked">
+            Harga <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input type="number" name="harga"></ion-input>
+    </ion-item>
+
+    <ion-item class="form-group">
+        <ion-label position="stacked">
+            Gambar <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input type="file" name="gambar"></ion-input>
+    </ion-item>
+
+    <ion-row>
+        <ion-col size="6" offset="3">
+            <ion-button expand="block">
+                Simpan
+            </ion-button>
+        </ion-col>
+    </ion-row>
+
+</ion-content>
