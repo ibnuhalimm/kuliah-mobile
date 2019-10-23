@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" menuToggle>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Artikel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <ion-item *ngFor="let article of articleList" class="article-item">
+      <ion-label class="article-title">{{ article?.title }}</ion-label>
+      <ion-button slot="end" (click)="viewArticle(article?.id)">
+        Lihat
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
