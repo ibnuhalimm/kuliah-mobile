@@ -16,6 +16,9 @@ export class ArticleDetailPage implements OnInit, OnDestroy {
   private ArticleSubs: Subscription;
   article: any;
 
+  private ArticleCommentsSubs: Subscription;
+  articleComments: any;
+
   constructor(
     private route: ActivatedRoute,
     private articleSrv: ArticleService
@@ -31,7 +34,15 @@ export class ArticleDetailPage implements OnInit, OnDestroy {
       this.article = article;
     });
 
+
     this.articleSrv.getArticleById(this.idArticle);
+
+
+    this.ArticleCommentsSubs = this.articleSrv.articleCommentsSubject.subscribe(comments => {
+      this.articleComments = comments;
+    });
+
+    this.articleSrv.getArticleComments(this.idArticle);
 
   }
 
@@ -39,6 +50,7 @@ export class ArticleDetailPage implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.idArticleSubs.unsubscribe();
     this.ArticleSubs.unsubscribe();
+    this.ArticleCommentsSubs.unsubscribe();
   }
 
 }

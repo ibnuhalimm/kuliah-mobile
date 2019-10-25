@@ -12,6 +12,7 @@ export class ArticleService {
 
   articleListSubject = new Subject<string[]>();
   articleSingleSubject = new Subject<string[]>();
+  articleCommentsSubject = new Subject<string[]>();
 
   constructor(
     private config: Config,
@@ -37,6 +38,17 @@ export class ArticleService {
             }))
             .subscribe(resData => {
               this.articleSingleSubject.next(resData);
+            });
+  }
+
+
+  getArticleComments(id: number) {
+    this.http.get<any>(this.config.apiArticleComments + id)
+            .pipe(map(results => {
+              return results;
+            }))
+            .subscribe(resData => {
+              this.articleCommentsSubject.next(resData);
             });
   }
 
