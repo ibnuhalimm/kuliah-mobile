@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 
+const baseUrl = 'https://jsonplaceholder.typicode.com';
+
 @Injectable()
 
 export class Config {
-    private readonly baseUrl: string = 'https://jsonplaceholder.typicode.com';
-
-    public readonly apiArticleList: string = this.baseUrl + '/posts';
-    public readonly apiArticleView: string = this.baseUrl + '/posts'; // Endpoint = /posts/:id
+    public readonly apiArticleList: string = baseUrl + '/posts';
+    public readonly apiArticleView: string = baseUrl + '/posts'; // Endpoint = /posts/:id
+    public readonly apiArticleComments: string = baseUrl + '/comments?postId='; // Endpoint = /comments?postId={id}
 }
