@@ -12,7 +12,7 @@
   <ion-list>
     <ion-item *ngFor="let article of articleList" class="article-item">
       <ion-label class="article-title">{{ article?.title }}</ion-label>
-      <ion-button slot="end" (click)="viewArticle(article?.id)">
+      <ion-button slot="end" [routerLink]="['/article-detail', article?.id]">
         Lihat
       </ion-button>
     </ion-item>

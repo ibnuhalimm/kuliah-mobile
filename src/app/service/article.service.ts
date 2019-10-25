@@ -11,6 +11,7 @@ import { Config } from '../config';
 export class ArticleService {
 
   articleListSubject = new Subject<string[]>();
+  articleSingleSubject = new Subject<string[]>();
 
   constructor(
     private config: Config,
@@ -27,4 +28,16 @@ export class ArticleService {
               this.articleListSubject.next(resData);
             });
   }
+
+
+  getArticleById(id: number) {
+    this.http.get<any>(this.config.apiArticleView + '/' + id)
+            .pipe(map(results => {
+              return results;
+            }))
+            .subscribe(resData => {
+              this.articleSingleSubject.next(resData);
+            });
+  }
+
 }

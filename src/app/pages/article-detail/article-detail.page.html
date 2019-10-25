@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" menuToggle>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-page">
+      {{ article?.title }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="title-page">
+              {{ article?.title }}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ article?.body }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 20px">
+      <ion-col size="6" offset="3">
+        <ion-button routerLink="/article">
+          <ion-icon name="arrow-back"></ion-icon> Daftar Artikel
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
